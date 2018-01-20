@@ -26,7 +26,7 @@ jobs:
         - ls -la
         - du -sh .stack-work
     - stage: deploy
-      if: type IN (push)
+      if: branch = master AND type IN (push)
       script:
         - echo "deploy stage"
         - pwd
