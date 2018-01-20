@@ -25,3 +25,10 @@ jobs:
         - pwd
         - ls -la
         - du -sh .stack-work
+    - stage: deploy
+      if: type IN (push)
+      script:
+        - echo "deploy stage"
+        - pwd
+        - ls -la
+        - du -sh .stack-work
